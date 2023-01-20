@@ -1,0 +1,94 @@
+
+
+
+
+
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="sidebar-content">
+        <ul class="side-list">
+          <li class="side-item">
+            <img src="../../assets/sidebaricons/members.png" alt="members">
+            <a [routerLink]="['/dashbord']"   class="side-herf" >Member </a></li>
+        </ul>
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/poles.png" alt="details">
+
+          <li class="side-item"><a [routerLink]="['/dashbord/pole']"   class="side-herf" >Pole-Details</a></li>
+        </ul>
+
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/newevent.png" alt="events">
+          <li class="side-item"><a [routerLink]="['/dashbord/event']"   class="side-herf" >New-Event</a></li>
+        </ul>
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/details.png" alt="details">
+
+          <li class="side-item"><a [routerLink]="['/dashbord/event-detail']"   class="side-herf" >Event-Details</a></li>
+        </ul>
+        <hr>
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/logout.png" alt="logout">
+          <li class="side-item"><a [routerLink]="['/']" (click)="logout()"  class="side-herf" >LogOut</a></li>
+        </ul>
+
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" style="height:40px;" mat-button (click)="drawer.toggle()">
+            <img src="../../assets/icons/menu.png" width="40">
+        </button>
+    <div class="content">
+        <div class="header">
+            <app-card  (click)="generateTab('0')" *ngIf="tabnbPoles[0]>0"  [nb]="tabnbPoles[0]" [title]="tabPoles[0]" ></app-card>
+            <app-card  (click)="generateTab('1')" *ngIf="tabnbPoles[1]>0"  [nb]="tabnbPoles[1]" [title]="tabPoles[1]" ></app-card>
+            <app-card  (click)="generateTab('2')" *ngIf="tabnbPoles[2]>0"  [nb]="tabnbPoles[2]" [title]="tabPoles[2]" ></app-card>
+            <app-card  (click)="generateTab('3')" *ngIf="tabnbPoles[3]>0"  [nb]="tabnbPoles[3]" [title]="tabPoles[3]" ></app-card>
+
+        </div>
+        <div class="body" *ngIf="exist">
+            <h1>
+                {{title}}
+            </h1>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+
+
+                <ng-container matColumnDef="prename">
+                  <th mat-header-cell *matHeaderCellDef> Prenom </th>
+                  <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="phone">
+                    <th mat-header-cell *matHeaderCellDef> Phone </th>
+                    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+                  </ng-container>
+
+
+                <ng-container matColumnDef="email">
+                  <th mat-header-cell *matHeaderCellDef> Email </th>
+                  <td mat-cell *matCellDef="let element">
+                    {{element.email}}
+                  </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                <tr class="mat-row" *matNoDataRow>
+                  <td class="mat-cell" colspan="4">No data matching the filter "input.value}}"</td>
+                </tr>
+              </table>
+
+        </div>
+
+    </div>
+    </div>
+    </mat-drawer-container>

@@ -1,0 +1,125 @@
+
+.content{
+    display: grid;
+margin: 0 auto;
+width: 80vw;
+}
+
+.side-list img{
+  margin:1em;
+  width: 30px;
+}
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+  text-align: center;
+}
+
+table{
+    justify-content: space-around;
+    width: 80vw;
+    overflow-y:scroll;
+    margin-top: -10em;
+
+    height:60vh;
+    display:block;
+    overflow-y: scroll;
+}
+th{
+    width: 80vw;
+    height: 2em;
+
+}
+td{
+    width: 80vw;
+    
+}
+
+
+.filter{
+    width: 50vw;
+    display: grid;
+    margin: 0 auto;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .mail-content{
+    margin: 1em 0 1em 0;
+    width: 80vw;
+  }
+  .subject-content{
+    margin: 1.5em 0 0 0;
+    width: 40vw;
+  }
+    
+.logo{
+  width: 130px;
+  margin: 0 auto;
+  display: grid;
+  margin-bottom: 5em;
+}
+  
+.example-sidenav-content {
+display: flex;
+height: 100vh;
+justify-content: center;
+}
+
+
+
+.side-item{
+  list-style: none;
+}
+
+.side-herf{
+  font-size: 1.2em;
+  text-decoration: none;
+  color: rgb(3, 3, 3);
+  font-family: monospace;
+  text-align: center;
+}
+
+.side-item{
+  padding-top:2em;
+  text-align: center;
+}
+
+.sidebar-content{
+  display: grid;
+  margin: 18vh auto;
+}
+
+.send-email{
+  width: 10vw;
+  display: grid;
+  margin: 0 auto;
+}
+.filter
+{
+  display: grid;
+  width:40vw;
+  height: 3em;
+  margin: 0 auto;
+}
+
+.side-list{
+  display: flex;
+  align-items: flex-start;
+}
+.side-list img{
+  margin:1em;
+  width: 30px;
+}

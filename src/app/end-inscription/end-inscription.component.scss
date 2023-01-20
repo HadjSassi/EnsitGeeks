@@ -1,0 +1,92 @@
+.img{
+    height: 680px;
+    background: url('/assets/img/Join.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  .img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background:black;
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0.3;
+    z-index: 2;
+  }
+  .img p{
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    position: relative;
+    color: #01c0cd;
+    margin-bottom: 25px;
+    z-index: 3;
+  
+  }
+  .img h1{
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    position: relative;
+    color: whitesmoke;
+    margin-bottom: 25px;
+    z-index: 3;
+    opacity: 0.8;
+  }
+  .parag{
+    color: rgb(163, 159, 159);
+    height: 130px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;  
+    padding: 30px 0px;
+  }
+  
+  
+
+
+
+
+  .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #01c0cd 0%,
+    #26e9b8 29%,
+    #7700ff  67%,
+    #ff1395 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+  font-size: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

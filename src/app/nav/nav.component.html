@@ -1,0 +1,20 @@
+<app-nav2 (notif)="onNotif()" [hidden]="hid" (notif2)="onNotif2()" style="z-index: 999;" *ngIf="activated && !click  && !navig"></app-nav2>
+<nav [hidden]="hid" [ngClass]="{'navbar':true,'navChange':change}" *ngIf="!activated && click && navig" >
+  <div class="container">
+        <div class="logo"><a  *ngIf="!change ">Geeks<span>Club</span></a>
+            <img [src]="logo"  *ngIf="change">
+        </div>
+        <ul class="list">
+            <li><a  routerLink="">Home</a></li>
+            <li><a  routerLink="Contact">ContactUs</a></li>
+            <li><a  routerLink="JoinUs"  >JoinUs</a></li>
+            <li><a  routerLink="Member">Member</a></li>
+        </ul>
+    </div>
+    <div class="haburger" (click)="activer()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    
+</nav>

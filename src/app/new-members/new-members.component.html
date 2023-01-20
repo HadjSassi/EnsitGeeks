@@ -1,0 +1,58 @@
+<div class="content container-fluid">
+  <div class="background">
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+   <div class="cube"></div>
+ </div>
+    <h2>{{"name:"+name+"     prename:"+prename| uppercase}}</h2>   
+    <h2>{{email   }}</h2>
+
+    <h2>Skills:</h2>
+    <p class="skills">
+        {{skills}} 
+    </p>
+    <h2>Departement:</h2>
+    <p class="skills">
+      {{dep}}
+    </p>
+    <div class="entretaint" *ngIf=" notOldMember()">
+      <h2> Interview Details:</h2>
+      <form *ngIf="interviewAffiche()" #form="ngForm">
+      <div class="interview-dtail">
+        <h4>Date:</h4>
+        <input type="date" name="dateI" ngModel  #date required>
+        <h4>Hour:</h4>
+        <input type="time" name="timeI" ngModel  #time required>
+        <h4>Salle:</h4>
+        <input type="text" class="salle" name="salleI" ngModel  #salle required>
+      </div>
+      <button class="inter" (click)="goToInterview(form)" [disabled]="form.invalid" mat-raised-button >Set Interview</button>
+    </form>
+    <div *ngIf="!interviewAffiche() " class="interview-dtail">
+      <h4>Date:</h4>
+      <p class="data">{{dateInterview}}</p>
+      <h4>Hour:</h4>
+      <p class="data">{{hourInterview}}</p>
+      <h4>Salle:</h4> 
+      <p class="data">{{salleInterview}}</p>
+
+    </div>
+
+    </div>
+    <h2>Stars Counter:</h2>
+    <div class="score">
+        <button mat-mini-fab (click)="add()"  color="primary" class="btn-action" aria-label="Example icon button with a delete icon">
+            +
+          </button>
+          <p class="conteur">
+            {{score+" "}}<img src="../../assets/icons/star.svg">
+          </p>
+          <button mat-mini-fab (click)="moin()" color="accent" class="btn-action" aria-label="Example icon button with a delete icon">
+            -
+        </button>
+    </div>
+    <button class="change" (click)="updateScore()" mat-raised-button color="primary">Update Score</button>
+
+</div>

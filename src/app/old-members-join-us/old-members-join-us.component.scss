@@ -1,0 +1,223 @@
+.img{
+    height: 680px;
+    background: url('../../assets/oldmembers.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  .img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background:black;
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0.3;
+    z-index: 2;
+  }
+  .img p{
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    position: relative;
+    color: #01c0cd;
+    margin-bottom: 25px;
+    z-index: 3;
+  
+  }
+  .img h1{
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    position: relative;
+    color: whitesmoke;
+    margin-bottom: 25px;
+    z-index: 3;
+    opacity: 0.8;
+  }
+  .parag{
+    color: rgb(163, 159, 159);
+    height: 130px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;  
+    padding: 30px 0px;
+  }
+  
+  .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    
+  }
+  .container{
+    width: 80%;
+    padding: 20px;
+  }
+  .container h2{
+    width: 100%;
+    color:  #01c0cd ;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .container .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  
+  .container .row100 .col{
+  position: relative;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 05s ;
+  }
+  .container .row100 .inputBox{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    color: #01c0cd ;
+  }
+  .container .row100 .inputBox input
+  {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #000;
+  z-index: 1;
+  }
+  .container .row100 .inputBox .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+  }  
+  
+  .container .row100 .inputBox input:focus + .text,
+  .container .row100 .inputBox input:valid + .text
+  {
+    top: -35px;
+    left: -10px;
+  
+  }
+  .container .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background:  #01c0cd ;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  
+  .container .row100 .inputBox input:focus ~ .line,
+  .container .row100 .inputBox input:valid ~ .line{
+  height: 100%;
+  }
+  .container .row100 .textArea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+    
+  }
+  .container .row100  .textArea textarea
+  {
+  height: 100%;
+  resize: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #000;
+  z-index: 1;
+  }
+  .container .row100 .textArea textarea:focus + .text,
+  .container .row100 .textArea textarea:valid + .text
+  {
+    top: -35px;
+    left: -10px;
+  
+  }
+  .container .row100 .textArea textarea:focus ~ .line,
+  .container .row100 .textArea textarea:valid ~ .line{
+  height: 100%;
+  }
+  input[type="submit"],select{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background:  white;
+    border: #01c0cd;
+    border-width: 2px;
+    border-style: solid ;
+    font-size: 18px;
+    border-radius: 2px;
+  }
+  input[type="submit"]:disabled{
+    color: red;
+      cursor:unset;
+      background: white;
+      
+}
+.col p{
+    font-size: 10px;
+    color: red;
+    margin-left: 7px;
+}
+  #skills{
+    cursor: pointer;
+    outline: none;
+    background:  white;
+    border: #01c0cd;
+    color: #000;
+    border-width: 2px;
+    border-style: solid ;
+    font-size: 18px;
+    border-radius: 2px;
+    width: 70vw;
+    height:10vh;
+    padding: 0.5em ;
+    resize: none;
+  }
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:  #01c0cd;
+    opacity: 1; /* Firefox */
+  }
+  

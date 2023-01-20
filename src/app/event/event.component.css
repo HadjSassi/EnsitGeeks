@@ -1,0 +1,115 @@
+.content{
+    width: 70vw;
+    display: flex;
+    margin: 5vh auto;    
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+    box-shadow: 10px 10px 15px rgb(58, 58, 58);
+}
+.eventimg{
+    width: 30vw;
+    height: 80vh;
+
+}
+.side-list img{
+    margin:1em;
+    width: 30px;
+  }
+
+form{
+    margin-top: 2em;
+    display: grid;
+    margin:0 auto;
+}
+.mat-form-field{
+    display: block;
+    width: 30vw;
+    color: rgb(26, 25, 25);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+mat-label{
+    color: #3f51b5;
+}
+
+.flex{
+    display: flex;
+}
+.num{
+    width:10vw
+}
+
+
+.example-sidenav-content {
+    height: 100vh;
+    display: flex;
+    }
+    
+    
+    
+    .side-item{
+        list-style: none;
+    }
+    
+    .side-herf{
+        font-size: 1.2em;
+        text-decoration: none;
+        color: rgb(3, 3, 3);
+        font-family: monospace;
+        text-align: center;
+    }
+    
+    .side-item{
+        padding-top:2em;
+        text-align: center;
+    }
+    
+    .sidebar-content{
+        display: grid;
+        margin: 18vh auto;
+    }
+    .btn-add{
+        height: 2em;
+    }
+    .register{
+        display: grid ;
+        margin: 0 auto;
+        color: white;
+        background-color: rgb(0, 228, 152);
+    }
+    .type-max{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .typeE{
+        width: 15vw;
+    }
+    .vect-evt{
+        width: 15vw;
+        display: grid;
+        margin: 1em auto 1em auto;
+        border-radius: 10vw;
+    }
+    .side-list{
+        display: flex;
+        align-items: flex-start;
+      }
+      .side-list img{
+        margin:1em;
+        width: 30px;
+      }
+      .title{
+        background: -webkit-linear-gradient(#5e89ff 2% ,#01233a );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        font-size: 2em;
+        font-family: monospace;
+        
+      }
+      .mat-drawer-inner-container.ng-tns-c86-6 {
+        overflow: hidden;
+    }

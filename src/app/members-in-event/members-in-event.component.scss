@@ -1,0 +1,101 @@
+.content{
+    width: 70vw;
+    overflow-x: hidden;
+    height: 40vh;
+    display: grid;
+    margin: 0 auto;
+    background:url("https://loading.io/asset/603530")
+
+}
+
+mat-form-field{
+    width: 25vw;
+    display: grid;
+    margin: 0 auto;
+}
+
+table{
+    width: 60vw;
+    margin: 0 auto;
+    height: 40vh;
+    display: block;
+    overflow-y: scroll;
+    
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+th,td{
+    width: 100vw;
+}
+.export{
+    display: grid;
+    margin:1em auto;
+}
+
+.loading{
+  display: grid;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  display: grid ;
+  margin: 0 auto;
+  
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 80px solid rgb(46, 102, 255);
+  border-color: rgb(38, 0, 126) transparent rgb(46, 102, 255) transparent;
+  animation: lds-hourglass 2.5s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+h1{
+  background: -webkit-linear-gradient(#5e91ff 2% ,#1a1a1a );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5em 0 ;
+  font-weight: 400;
+  text-align: center;
+  font-family:monospace;
+
+}

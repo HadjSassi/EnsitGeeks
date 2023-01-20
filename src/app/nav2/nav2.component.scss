@@ -1,0 +1,55 @@
+.container{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu',sans-serif;
+    background:#00c0cd;
+    z-index: 999;
+}
+
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    height: 90vh;
+    list-style: none;
+}
+.list li a{
+    color: aliceblue;
+    font-weight: 450;
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.4s ease;
+}
+.list li a:hover{
+    color: black;
+    cursor: pointer;
+
+}
+
+.haburger{
+    position:absolute;
+    cursor: pointer;
+    z-index: 3;
+    right: 5%;
+    top: 20%;
+    z-index:999;
+    margin-top: -100px;
+}
+.line{
+    width: 30px;
+    height: 3px;
+    background:white;
+    margin: 6px;
+}
+
+
+
+

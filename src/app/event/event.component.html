@@ -1,0 +1,98 @@
+
+
+
+
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="sidebar-content">
+        <ul class="side-list">
+          <li class="side-item">
+            <img src="../../assets/sidebaricons/members.png" alt="members">
+            <a [routerLink]="['/dashbord']"   class="side-herf" >Member </a></li>
+        </ul>
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/poles.png" alt="details">
+  
+          <li class="side-item"><a [routerLink]="['/dashbord/pole']"   class="side-herf" >Pole-Details</a></li>
+        </ul>
+  
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/newevent.png" alt="events">
+          <li class="side-item"><a [routerLink]="['/dashbord/event']"   class="side-herf" >New-Event</a></li>
+        </ul>
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/details.png" alt="details">
+  
+          <li class="side-item"><a [routerLink]="['/dashbord/event-detail']"   class="side-herf" >Event-Details</a></li>
+        </ul>
+        <hr>
+        <ul class="side-list">
+          <img src="../../assets/sidebaricons/logout.png" alt="logout">
+          <li class="side-item"><a [routerLink]="['/']" (click)="logout()"  class="side-herf" >LogOut</a></li>
+        </ul>
+  
+        </div>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" style="height:40px;" mat-button (click)="drawer.toggle()">
+        <img src="../../assets/icons/menu.png" width="40">
+      </button>
+  
+      <div class="content">
+        <img src="../../assets/event.jpg" class="eventimg" alt="">
+        <form #form="ngForm" >
+            <h1 class="title">Event Form</h1>
+            <div class="row">
+                <div class="col-9">
+                    <mat-form-field    appearance="fill">
+                        <mat-label>Event Name</mat-label>
+                        <input matInput #eventName ngModel [(ngModel)]="nameE" name="nameE" required>
+                    </mat-form-field>
+                </div>
+                <div class="type-max">
+                    <mat-form-field   class="num" appearance="fill">
+                        <mat-label>Max Number</mat-label>
+                        <input matInput min="0" type="number" #maxnumber [(ngModel)]="max" ngModel   name="max" required>
+                    </mat-form-field>  
+                    <mat-form-field appearance="fill" class="typeE">
+                        <mat-label>Event Type</mat-label>
+                        <mat-select ngModel name="options" >
+                          <mat-option value="event">
+                            Event
+                          </mat-option>
+                          <mat-option value="trainning">
+                            Trainning
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>   
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <mat-form-field   appearance="fill">
+                        <mat-label> Url Open (Date)</mat-label>
+                        <input matInput type="date" [(ngModel)]="date1" #urlopen ngModel  name="dateouvert" required>
+                    </mat-form-field>
+                </div>
+            
+                <div class="col">
+                    <mat-form-field    appearance="fill">
+                        <mat-label>Url Close (Date)</mat-label>
+                        <input matInput type="date" #urlclose [(ngModel)]="date2" ngModel  name="dateferme" required>
+                    </mat-form-field>
+                </div>
+            </div>        
+            <mat-form-field  appearance="fill">
+                <mat-label>Event Details </mat-label>
+                <textarea matInput placeholder="Write the event details" [(ngModel)]="info" #detail ngModel name="detail"  ></textarea>
+            </mat-form-field>
+            <button mat-raised-button  (click)="addEvent(form)" [disabled]="form.invalid || compareDate()" class="register"  >New Event</button>
+        </form>
+        
+    </div>
+    </div>
+     </mat-drawer-container>
+  

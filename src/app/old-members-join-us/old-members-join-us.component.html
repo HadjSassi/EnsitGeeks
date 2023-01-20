@@ -1,0 +1,92 @@
+<div class="img">
+    <div class="text">
+
+        <p>Join Us</p>
+        <h1>Be a part of our  community</h1>
+    </div>
+</div>
+
+<div class="parag" data-aos="fade-up"
+data-aos-duration="3000">
+    <p>
+        Are you a creative, organized , who is relationship driven, able to work on multiple jobs at one time ?<br>
+        <br>want to be a part of a growing, dynamic team, please complete the form below and upload your resume to apply for the available position(s). We look forward to speaking with you soon!
+    </p>
+    </div>
+
+<div class="form">
+<div class="container">
+    <h2>Join us Form</h2>
+    <form #form="ngForm">
+    <div class="row100">
+        <div class="col">
+            <div class="inputBox">
+                <input type="text" name="name" id="name"   [(ngModel)]="name" required>
+                <span class="text">Name</span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="inputBox">
+                <input type="text" name="prename" id="lastname"   [(ngModel)]="prename" required>
+                <span class="text">Last Name</span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row100">
+        <div class="col">
+            <div class="inputBox">
+                <input type="email" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email"   [(ngModel)]="mail" required>
+                <span class="text">Email</span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="inputBox">
+                <input type="text" name="phone" id="mobile" pattern="[0-9]{8}"  [(ngModel)]="phone" required>
+                <span class="text">Mobile</span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row100">
+        <div class="col">
+            <div class="inputBox">
+                <textarea placeholder="Skills" type="text" name="skills" id="skills" [(ngModel)]="skills" required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row100">
+        <div class="col">
+            <div class="inputBox textArea">
+                <span class="text">Choose your departement</span>
+                <div  class="buttonshoose"   style= "margin-top: 30px;width: 150px;margin-left: 0%;">
+                    <select  name="dep" id="dep" ngModel  required >
+                        <option value="computer engineering" >Computer Engineering</option>
+                        <option value="mathematical engineering">Mathematics and Modeling Engineering</option>
+                        <option value="industrial engineering">Industrial Engineering</option>
+                        <option value="electrical engineering">Electrical Engineering</option>
+                        <option value="mechanical engineering">Mechanical Engineering</option>
+                        <option value="civil engineering">Civil Engineering</option>
+
+                    </select>
+                  <div class="select-selected"></div><div class="select-items select-hide"></div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row100">
+        <div class="col">
+            <input type="submit"  [disabled]="form.invalid" (click)="addPerson(form)">
+            <p *ngIf="form.invalid">please complete the form</p>
+        </div>
+    </div>
+  </form>
+
+ </div>
+
+</div>
