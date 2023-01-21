@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-event',
@@ -19,7 +20,7 @@ export class EventComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
 
   logout(){
     localStorage.setItem("token","0");
@@ -36,13 +37,13 @@ export class EventComponent implements OnInit {
           this.max="";
           this.nameE="";
           alert("event has been created")
-        
+
         }
         else{
           alert("event is already exist")
 
         }
-        
+
       }
       ,(err)=>{
         console.log(err)

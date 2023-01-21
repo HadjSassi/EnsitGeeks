@@ -1,82 +1,95 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {Environment} from "@angular/cli/lib/config/workspace-schema";
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private http:HttpClient) {
-    
-   }
+  backEnd = environment.backend;
+  constructor(private http: HttpClient) {
+
+  }
 //https://www.ensitgeeksclub.com
-   public getHeader(): HttpHeaders {
+  public getHeader(): HttpHeaders {
     let requestHeader = new HttpHeaders();
-   
+
     requestHeader.append('Content-Type', 'application/json');
     return requestHeader;
   }
-   getAllMembers(){
-    return this.http.get("http://localhost:8800/backend/getMembers.php");
-   }
-   addNewMembers(person:any):Observable<any>
-   {
-  
-    return this.http.post("http://localhost:8800/backend/addNewMembers.php",person,{headers:this.getHeader()})}
-   test(){
-    return this.http.post("http://localhost:8800/backend/api.php",{"me":0});
-   }
-   login(info:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/login.php",info)
-   }
-   sendEmail(mails:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/login.php",mails)
-   }
-   updateScore(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/updateScore.php",obj);
-   }
-   getNewSore(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/score.php",obj);
 
-  }
-  passToIneterview(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/updateForInterview.php",obj);
-
-  }
-  sendManyMails(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/sendManyEmails.php",obj);
+  getAllMembers() {
+    return this.http.get(this.backEnd+"backend/getMembers.php");
   }
 
-  sendEmailAndUpdateState(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/sendEmailAndUpdateState.php",obj);
+  addNewMembers(person: any): Observable<any> {
+
+    return this.http.post(this.backEnd+"backend/addNewMembers.php", person, {headers: this.getHeader()})
   }
 
-  getAllEvents():Observable<any>{
-    return this.http.get("http://localhost:8800/backend/allEvents.php");
+  test() {
+    return this.http.post(this.backEnd+"backend/api.php", {"me": 0});
   }
 
-  getOpenEvents():Observable<any>{
-    return this.http.get("http://localhost:8800/backend/openEvents.php");
+  login(info: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/login.php", info)
   }
 
-  EventInscriptions(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/eventDetails.php",obj);
+  sendEmail(mails: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/login.php", mails)
   }
 
-  newEvent(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/newEvent.php",obj);
+  updateScore(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/updateScore.php", obj);
   }
 
-  inscription(person:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/inscription.php",person);
-  }
-  addNewMemberToPole(obj:any):Observable<any>{
-    return this.http.post("http://localhost:8800/backend/addNewMemberToPole.php",obj);
+  getNewSore(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/score.php", obj);
+
   }
 
-  getMembersByPoles():Observable<any>{
-    return this.http.get("http://localhost:8800/backend/getMembersByPoles.php");
+  passToIneterview(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/updateForInterview.php", obj);
+
+  }
+
+  sendManyMails(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/sendManyEmails.php", obj);
+  }
+
+  sendEmailAndUpdateState(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/sendEmailAndUpdateState.php", obj);
+  }
+
+  getAllEvents(): Observable<any> {
+    return this.http.get(this.backEnd+"backend/allEvents.php");
+  }
+
+  getOpenEvents(): Observable<any> {
+    return this.http.get(this.backEnd+"backend/openEvents.php");
+  }
+
+  EventInscriptions(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/eventDetails.php", obj);
+  }
+
+  newEvent(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/newEvent.php", obj);
+  }
+
+  inscription(person: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/inscription.php", person);
+  }
+
+  addNewMemberToPole(obj: any): Observable<any> {
+    return this.http.post(this.backEnd+"backend/addNewMemberToPole.php", obj);
+  }
+
+  getMembersByPoles(): Observable<any> {
+    return this.http.get(this.backEnd+"backend/getMembersByPoles.php");
   }
 
 }

@@ -31,8 +31,8 @@ const routes: Routes = [
   { path:'old-members',component:OldMembersJoinUsComponent},
   { path:'geekshack-poles',component:PoleDevisionComponent},
   { path:"event/:id",component:SubsecriptionComponent},
-  { path:"dashbord",canActivate:[AuthentificationGuard],children:[
-    
+  { path:"dashbord",children:[
+
     {
       path:'', component: MainPaigeComponent
     },
@@ -46,13 +46,13 @@ const routes: Routes = [
     {
       path:'event-detail', component: EventDetailComponent
     },
-    
+
   ]
 },
 { path: '**', component: Page404Component }
-  
+
   ];
-  
+
   @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]

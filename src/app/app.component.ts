@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { ApiService } from './api.service';
+import {environment} from "../environments/environment";
 export class info{
   static my:any;
  }
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit {
   test:boolean=true;
   tab=["/Home","","/JoinUs","/Member","/Contact"];
   loc:any;
+  footer = environment.footer;
   constructor(location: Location, router: Router,private service:ApiService) {
      this.route = location.path();
      this.loc=location;
