@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'JoinUs', component: EndInscriptionComponent },
   { path: 'Member', component: LoginComponent },
   { path:'geeks-club-bureau-log-in',component:GeeksbureauComponent},
-  { path:'old-members',component:OldMembersJoinUsComponent},
+  { path:'new-members',component:OldMembersJoinUsComponent},
   { path:'geekshack-poles',component:PoleDevisionComponent},
   { path:"event/:id",component:SubsecriptionComponent},
   { path:"dashbord",children:[
