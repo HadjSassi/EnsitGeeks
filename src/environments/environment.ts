@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backend: "https://www.ensitgeeksclub.com/",
+  // backend: "http://localhost:1234",
+  backend: "https://www.ensitgeeksclub.com/backend/",
   footer : true
 };
 
