@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:ital,wght@0,500;0,700;1,300&display=swap');
+.about-container {padding: 70px 0;display: flex;justify-content: space-around;}
+.about-container .left img{width:350px;}
+.about-container .left{width: 40%;}
+.about-container .right{width: 45%;display: flex;align-items: center;}
+.right p span{font-weight: 600;color:#2584c5;}
+.thank-about{font-family: 'Poppins',sans-serif;width: 100%;}
+.thank-about .container2{width: 90%;margin: auto;}
+.thank-about .container2 h1{text-align: center;font-family: 'Ubuntu',sans-serif;font-weight: 500;font-size: 35px;position: relative;padding-top: 50px;}
+.thank-about .container2 h1::before{position: absolute;background:#2584c5;width: 180px;height: 3px;transform: translateX(-50%);bottom: -10px;content: "";left: 50%;}
+.thank-about .container2 h1::after{position: absolute;background:#fff;transform: translateX(-50%);bottom: -20px;content: "Team Dev";left: 50%;font-size: 20px;}
+.thank-container {padding: 70px 0;display: flex;justify-content: space-around;}
+.thank-container .left img{width:350px;}
+.thank-container .left{width: 40%;}
+.thank-container .right{width: 45%;display: flex;align-items: center;}
+.right p span{font-weight: 600;color:#2584c5;}

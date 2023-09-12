@@ -6,9 +6,9 @@
         <div class="line"></div>
         </div>
      <ul class="list">
-        <li><a   (click)="notif2.emit()" [routerLink]="['']" >Home</a></li> 
-        <li><a (click)="goContact();notif2.emit()">ContactUs</a></li>
+        <li><a   (click)="notif2.emit()" [routerLink]="['']" >Home</a></li>
+       <li><a (click)="goStore();notif2.emit()" style="margin-right: 0px;" [routerLink]="['/Store']">Store</a></li>
         <li><a (click)="goJoin();notif2.emit()" [routerLink]="['/JoinUs']" routerLinkActive="router-link-active" >JoinUs</a></li>
-        <li><a (click)="goMember();notif2.emit()" style="margin-right: 0px;" [routerLink]="['/member']">Member</a></li>
-    </ul>
+       <li><a (click)="goContact();notif2.emit()">ContactUs</a></li>
+     </ul>
 </div>

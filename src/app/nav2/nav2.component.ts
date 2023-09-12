@@ -1,6 +1,8 @@
 import { Component, OnInit,EventEmitter,Output } from '@angular/core';
+// @ts-ignore
 import { Router } from '@angular/router';
 
+// @ts-ignore
 @Component({
   selector: 'app-nav2',
   templateUrl: './nav2.component.html',
@@ -16,7 +18,10 @@ export class Nav2Component implements OnInit {
  }
  goMember(){
   this.router.navigate(["Member"]);
-} 
+}
+goStore(){
+  this.router.navigate(["Store"]);
+}
 goContact(){
   this.router.navigate(["Contact"]);
 }

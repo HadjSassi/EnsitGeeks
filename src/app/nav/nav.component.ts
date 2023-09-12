@@ -1,5 +1,6 @@
 import { Component, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
 
+// @ts-ignore
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -9,8 +10,7 @@ export class NavComponent implements OnChanges {
 activated:boolean=false;
 click:boolean=true;
 navig:boolean=true;
-logo :String="../../assets/img/logo-geeks.png";
-@Input() url="" ; 
+@Input() url="" ;
 hid=false
 constructor() { }
 
@@ -22,7 +22,7 @@ constructor() { }
     else {
       this.hid=false
     }
-  
+
   }
   change:boolean=false;
   activer(){

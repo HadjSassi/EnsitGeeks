@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:ital,wght@0,500;0,700;1,300&display=swap');
+.home-about .service .container2 h1::after{content: "";}
+.service .container2 h1{color: whitesmoke;text-align: center;font-family: 'Ubuntu',sans-serif;font-weight: 500;font-size: 35px;position: relative;padding-top: 50px;}
+.service .container2 h1::before {position: absolute;background: #2584c5;width: 180px;height: 3px;transform: translateX(-50%);bottom: -10px;content: "";left: 50%;}
+.service .container2 h1::before{background:#00c0cd;position: absolute;width: 75px;}
+.service{background: url('../../assets/img/Sans\ titre\ \(11\).png');background-repeat: no-repeat;background-position: center;background-attachment: fixed;background-size: cover;width: 100%;position: relative;z-index: 1;font-family: 'Poppins',sans-serif;}
+.service .container2{width: 90%;margin: auto;}
+.service .about-container{display: flex;padding: 80px 0;position: relative;}
+.box{background:#00c0cd;margin: 0px 10px;}
+.box:hover{background: none;}
+.services .card{width: calc(33% - 20px);text-align: center;border-radius: 6px;padding: 20px 25px;cursor: pointer;transition: all 0.2s ease;}
+.card:hover{background:#2584c5;}
+.card .box{transition: all 0.3s ease;padding: 20px 20px;text-align: center;}
+.card:hover .box{transform: scale(1.05);}
+.service .card i{font-size: 50px;color: white ;transition: color 0.3s ease;}
+.service .card:hover i{color: #fff;}
+.service .card .text{font-size: 18px;font-weight: 600;margin: 10px 0 7px 0;}
+.hamburger{position: absolute;}
+.teamBoard{text-align: center;background: #f5f5f5;}
+.title{height: 100px;display: flex;align-items: center;justify-content: center}
+.title h1{text-align: center;font-family: 'Ubuntu',sans-serif;font-weight: 500;font-size: 35px;position: relative;color: black;}
+.title h1::before{position: absolute;background:#2584c5;width: 225px;height: 3px;transform: translateX(-50%);bottom: -10px;content: "";left: 50%;}

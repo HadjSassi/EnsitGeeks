@@ -13,6 +13,8 @@ export class SubsecriptionComponent implements OnInit {
   prename:String=""
   mail:String=""
   title:String=""
+  description: String = ""
+  tel:String=""
   constructor(private route:Router,private service:ApiService ) {
     this.service.getOpenEvents().subscribe(
       res=>{
@@ -21,6 +23,7 @@ export class SubsecriptionComponent implements OnInit {
           if(value==e["name"])
           {
             this.title=this.route.url.split("/")[2]
+            this.description = e["description"]
           }
         });
         if(this.title=="")

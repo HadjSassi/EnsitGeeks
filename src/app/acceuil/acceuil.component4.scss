@@ -1,0 +1,16 @@
+.achieve{background: url('../../assets/img/fait.jpg');background-repeat: no-repeat;background-position: center;background-attachment: fixed;background-size: cover;width: 100%;position: relative;z-index: 1;font-family: 'Poppins',sans-serif;}
+.achieve .container2 h1::after{content: "";}
+.achieve .container2 h1{color: whitesmoke;text-align: center;font-family: 'Ubuntu',sans-serif;font-weight: 500;font-size: 35px;position: relative;padding-top: 50px;}
+.achieve .container2 h1::before {position: absolute;background: #2584c5;width: 180px;height: 3px;transform: translateX(-50%);bottom: -10px;content: "";left: 50%;}
+.achieve .container2 h1::before{background:#00c0cd;position: absolute;width: 75px;}
+.achieve .container2{width: 90%;margin: auto;}
+.achieve.about-container{display: flex;padding: 80px 0;position: relative;}
+.achieve .box{background: none;margin: 0px 10px;}
+.achieve .card{width: calc(33% - 20px);text-align: center;border-radius: 6px;padding: 20px 25px;cursor: pointer;transition: all 0.2s ease;}
+.achieve .card .box{transition: all 0.3s ease;padding: 20px 20px;text-align: center;}
+.achieve .card:hover .box{transform: scale(1.05);}
+.achieve .card i{font-size: 80px;color:#00c0cd ;transition: color 0.3s ease;}
+.achieve .card:hover i{color: #fff;}
+.achieve .card .text{font-size: 25px;font-weight: 600;margin: 10px 0 7px 0;color: rgb(0, 0, 0);text-align: center;}
+.achieve .card:hover .text{font-size: 25px;font-weight: 600;margin: 10px 0 7px 0;color: rgb(255, 255, 255);text-align: center;}
+.achieve .card:hover{background: none;}

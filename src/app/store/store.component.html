@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="img">
+  <div class="text">
+    <p>Take a look on our Store!</p>
+    <h1>Geeks Store</h1>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="container pt-3">
+
+
+  <div class="input-group" style="width:99%">
+    <input class="form-control mr-sm-2 search " type="search" placeholder="Enter the product name..." aria-label="Search"
+           [(ngModel)]="searchText" (input)="filterProducts()">
+    <div class="input-group-append">
+      <span class="input-group-text" style="height:100%">
+        <i class="fa fa-search" style="color:#B1AFB0"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-9 order-md-2">
+      <div class="store p-3">
+
+
+        <div>
+
+          <div class="row">
+            <div *ngFor="let item of filteredProducts" class="col-lg-4 col-sm-6 col-xs-12">
+              <div class="card p-2 mb-4" style="cursor:pointer" (click)="itemise(item.id)">
+                <img src="../../assets/store/{{item.path}}" alt="">
+                <p class="mb-0" style="color:rgba(128, 128, 128, 0.64)">Added: {{item.date}}</p>
+                <p style="color:#f37786; font-weight:500; font-size:larger">{{item.name}}</p>
+                <p style="color:rgba(128, 128, 128, 0.674); font-size:17px">{{item.description}}</p>
+                <p class="mt-2">  <span style="font-weight:600;  margin-right:14px; color:#2c2828">{{item.price}}TND</span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+    <div class="col-md-3 order-md-1 mt-3">
+      <div class="categories p-3" >
+        <h5 style="color:rgba(0, 0, 0, 0.789); font-weight:600"  class="fs-6 mb-4">CATEGORIES</h5>
+        <div>
+          <div class="d-flex align-items-center item" (click)="showAll()" >
+            <p class="mb-0">All features</p>
+            <i class="fa fa-plus ms-auto"></i>
+          </div>
+          <div class="d-flex align-items-center item" (click)="filterByCategory('clothes')">
+            <img src="../../assets/dress.svg" alt="" class="svgs me-2">
+            <p class="mb-0">Clothes</p>
+            <i class="fa fa-plus ms-auto"></i>
+          </div>
+          <div class="d-flex align-items-center item" (click)="filterByCategory('accessories')">
+            <img src="../../assets/shoes.svg" alt="" class="svgs me-2">
+            <p class="mb-0">Accessories</p>
+            <i class="fa fa-plus ms-auto"></i>
+          </div>
+          <div class="d-flex align-items-center item" (click)="filterByCategory('services')">
+            <img src="../../assets/jewelry.svg" alt="" class="svgs me-2">
+            <p class="mb-0">Services</p>
+            <i  class="fa fa-plus ms-auto"></i>
+          </div>
+
+
+        </div>
+        <div class="mt-5">
+          <h4 style="color:rgba(0, 0, 0, 0.789); font-weight:600"  class="fs-6">Filter by price</h4>
+          <mat-slider [min]="min0" [max]="max0" style="width: 95%" showTickMarks discrete [displayWith]="formatLabel"
+                      (input)="filterByPrice()" [(ngModel)]="min">
+            <input matSliderStartThumb [(ngModel)]="min">
+            <input matSliderEndThumb [(ngModel)]="max">
+          </mat-slider>
+
+        </div>
+      </div>
+
+
+      <div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!--Page body ends here-->
+</div>
+
+
+
+

@@ -10,6 +10,7 @@
 <div class="form">
 <div class="container">
     <h2>{{title+" Form"}} </h2>
+    <h3>{{description}}</h3>
     <form #form="ngForm">
     <div class="row100">
         <div class="col">
@@ -36,7 +37,14 @@
                 <span class="line"></span>
             </div>
         </div>
-        
+      <div class="col">
+            <div class="inputBox">
+                <input type="tel" name="tel" id="tel"   [(ngModel)]="tel" required>
+                <span class="text">Telephone</span>
+                <span class="line"></span>
+            </div>
+        </div>
+
     </div>
     <div class="row100 btn-send">
         <div class="col">
@@ -48,4 +56,4 @@
 
  </div>
 
-</div> 
+</div>

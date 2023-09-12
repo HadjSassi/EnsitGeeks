@@ -1,9 +1,11 @@
+// @ts-ignore
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Environment} from "@angular/cli/lib/config/workspace-schema";
 import {environment} from "../environments/environment";
 
+// @ts-ignore
 @Injectable({
   providedIn: 'root'
 })
@@ -22,74 +24,74 @@ export class ApiService {
   }
 
   getAllMembers() {
-    return this.http.get(this.backEnd+"backend/getMembers.php");
+    return this.http.get(this.backEnd+"getMembers.php");
   }
 
   addNewMembers(person: any): Observable<any> {
 
-    return this.http.post(this.backEnd+"backend/addNewMembers.php", person, {headers: this.getHeader()})
+    return this.http.post(this.backEnd+"addNewMembers.php", person, {headers: this.getHeader()})
   }
 
   test() {
-    return this.http.post(this.backEnd+"backend/api.php", {"me": 0});
+    return this.http.post(this.backEnd+"api.php", {"me": 0});
   }
 
   login(info: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/login.php", info)
+    return this.http.post(this.backEnd+"login.php", info)
   }
 
   sendEmail(mails: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/login.php", mails)
+    return this.http.post(this.backEnd+"login.php", mails)
   }
 
   updateScore(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/updateScore.php", obj);
+    return this.http.post(this.backEnd+"updateScore.php", obj);
   }
 
   getNewSore(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/score.php", obj);
+    return this.http.post(this.backEnd+"score.php", obj);
 
   }
 
   passToIneterview(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/updateForInterview.php", obj);
+    return this.http.post(this.backEnd+"updateForInterview.php", obj);
 
   }
 
   sendManyMails(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/sendManyEmails.php", obj);
+    return this.http.post(this.backEnd+"sendManyEmails.php", obj);
   }
 
   sendEmailAndUpdateState(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/sendEmailAndUpdateState.php", obj);
+    return this.http.post(this.backEnd+"sendEmailAndUpdateState.php", obj);
   }
 
   getAllEvents(): Observable<any> {
-    return this.http.get(this.backEnd+"backend/allEvents.php");
+    return this.http.get(this.backEnd+"allEvents.php");
   }
 
   getOpenEvents(): Observable<any> {
-    return this.http.get(this.backEnd+"backend/openEvents.php");
+    return this.http.get(this.backEnd+"openEvents.php");
   }
 
   EventInscriptions(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/eventDetails.php", obj);
+    return this.http.post(this.backEnd+"eventDetails.php", obj);
   }
 
   newEvent(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/newEvent.php", obj);
+    return this.http.post(this.backEnd+"newEvent.php", obj);
   }
 
   inscription(person: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/inscription.php", person);
+    return this.http.post(this.backEnd+"inscription.php", person);
   }
 
   addNewMemberToPole(obj: any): Observable<any> {
-    return this.http.post(this.backEnd+"backend/addNewMemberToPole.php", obj);
+    return this.http.post(this.backEnd+"addNewMemberToPole.php", obj);
   }
 
   getMembersByPoles(): Observable<any> {
-    return this.http.get(this.backEnd+"backend/getMembersByPoles.php");
+    return this.http.get(this.backEnd+"getMembersByPoles.php");
   }
 
 }

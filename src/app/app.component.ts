@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// @ts-ignore
 import { Location } from '@angular/common';
+// @ts-ignore
 import { Router } from '@angular/router';
 import { ApiService } from './api.service';
 import {environment} from "../environments/environment";
@@ -7,6 +9,7 @@ export class info{
   static my:any;
  }
 
+// @ts-ignore
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +18,7 @@ export class info{
 export class AppComponent implements OnInit {
   route:any;
   test:boolean=true;
-  tab=["/Home","","/JoinUs","/Member","/Contact"];
+  tab=["/Home","","/JoinUs","/Contact","/Store"];
   loc:any;
   footer = environment.footer;
   constructor(location: Location, router: Router,private service:ApiService) {
@@ -27,14 +30,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-         this.service.getAllEvents().subscribe(
-           (res:any)=>{
-
-            info.my=res;
-          },
-          (err)=>{
-            console.log(err);
-          })
+         // this.service.getAllEvents().subscribe(
+         //   (res:any)=>{
+         //
+         //    info.my=res;
+         //  },
+         //  (err)=>{
+         //    console.log(err);
+         //  })
       }
 
 

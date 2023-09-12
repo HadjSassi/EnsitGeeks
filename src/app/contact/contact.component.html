@@ -3,65 +3,58 @@
         <p>Do you have a problem ?</p>
         <h1>Let us hear you !</h1>
       </div>
-</div> 
+</div>
 
-
-<section class="contact" id="contact" data-aos="fade-up"
-data-aos-duration="3000">
-    <div class="max-width">
-        <h2 class="title">Contact Us</h2>
-        <div class="contact-content">
-            <div class="column left">
-                <div class="icons"> 
-                    <div class="row">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="info">
-                            <div class="head">Address</div>
-                            <div class="sub-title">Street Tahe Hussein Monfleury , 1008 Tunis</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fas fa-user"></i>
-                        <div class="info">
-                            <div class="head">Phone</div>
-                            <div class="sub-title">+21643308524</div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fas fa-envelope"></i>
-                        <div class="info">
-                            <div class="head">Email</div>
-                            <div class="sub-title">contact@ensitgeeksclub.com</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column right">
-                <div class="text">Message us</div>
-                <form [formGroup]="ContactForm" (onsubmit)="onSubmitForm()">
-                    <div class="fields">
-                        <div class="field name">
-                            <input type="text"  class="form-control" formControlName="name" placeholder="Name" required>
-                        </div>
-                        <div class="field name">
-                            <input type="text" class="form-control" formControlName="lastname" placeholder="lastName" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <input type="email" class="form-control" formControlName="email" placeholder="Email" required>
-                    </div>
-                    <div class="field">
-                        <input type="text" class="form-control" formControlName="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="field textarea">
-                        <textarea cols="30" rows="10" class="form-control" formControlName="msg" placeholder="Message.." required></textarea>
-                    </div>
-                    <div class="button">
-                        <button type="submit" [disabled]="ContactForm.invalid">Send message</button>
-                        <p *ngIf="ContactForm.invalid">please complete the form</p>
-                    </div>
-                </form>
-            </div>
+<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="3000">
+  <div class="container">
+    <h2 class="title">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <div class="info">
+            <h3 class="head">Phone</h3>
+            <div class="sub-title">+21643308524</div>
+          </div>
+          <div class="info">
+            <h3 class="head">Email</h3>
+            <div class="sub-title">contact@ensitgeeksclub.com</div>
+          </div>
+          <div class="info">
+            <h3 class="head">Address</h3>
+            <div class="sub-title">Street Tahe Hussein Monfleury , 1008 Tunis</div>
+          </div>
         </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.4177765636646!2d10.176080425568475!3d36.78453251858308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd340576fc1a05%3A0x25fc1aa869f8cfb6!2s%C3%89cole%20nationale%20sup%C3%A9rieure%20d&#39;ing%C3%A9nieurs%20de%20Tunis%20(ENSIT)!5e0!3m2!1sen!2stn!4v1693670110468!5m2!1sen!2stn" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3 class="head ">Message us</h3>
+        <form [formGroup]="ContactForm" (ngSubmit)="onSubmitForm()">
+          <div class="fields">
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" formControlName="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea cols="30" rows="10" class="form-control" formControlName="msg" placeholder="Message.." required></textarea>
+          </div>
+          <div class="button">
+            <button type="submit" [disabled]="ContactForm.invalid" class="btn btn-primary">Send message</button>
+            <p *ngIf="ContactForm.invalid" class="text-danger">Please complete the form</p>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </section>
+
