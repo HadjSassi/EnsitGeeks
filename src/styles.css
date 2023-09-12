@@ -1,14 +1,1 @@
-@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
-*{
-  margin: 0px;
-  padding: 0px;
-  text-decoration: none;
-
-}
-body{
-  width: 100vw;
-  overflow-x:hidden ;
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
